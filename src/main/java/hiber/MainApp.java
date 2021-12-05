@@ -24,18 +24,18 @@ public class MainApp {
 
       List<User> users = userService.listUsers();
       for (User user : users) {
-         System.out.println("Id = "+user.getId());
-         System.out.println("First Name = "+user.getFirstName());
-         System.out.println("Last Name = "+user.getLastName());
-         System.out.println("Email = "+user.getEmail());
-         System.out.println("Model = "+user.getCar().getModel());
-         System.out.println("Series = "+user.getCar().getSeries());
+         System.out.println("Id = "+ user.getId());
+         System.out.println("First Name = "+ user.getFirstName());
+         System.out.println("Last Name = "+ user.getLastName());
+         System.out.println("Email = "+ user.getEmail());
+         System.out.println("Model = "+ user.getCar().getModel());
+         System.out.println("Series = "+ user.getCar().getSeries());
 
          System.out.println();
       }
 
-      List<User> getUser = userService.getUserByCar("Ford Focus", 1);
-      System.out.println(getUser);
+      User user = userService.getModelSeries("Ford Focus", 1);
+      System.out.println(user);
 
       context.close();
    }
