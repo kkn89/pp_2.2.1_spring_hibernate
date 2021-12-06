@@ -33,7 +33,7 @@ public class UserServiceImp implements UserService {
 
    @Transactional(readOnly = true)
    @Override
-   public User getModelSeries(String model, int series) {
+   public List<User>  getModelSeries(String model, int series) {
       return userDao.getModelSeries(model, series);
    }
 

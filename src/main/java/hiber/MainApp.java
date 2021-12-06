@@ -34,8 +34,8 @@ public class MainApp {
          System.out.println();
       }
 
-      User user = userService.getModelSeries("Ford Focus", 1);
-      System.out.println(user);
+      List<User> getUser = userService.getModelSeries("Ford Focus", 1);
+      System.out.println(getUser);
 
       context.close();
    }
